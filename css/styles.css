@@ -12,6 +12,19 @@ body{
     display: none;
 }
 
+.abm{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.datos{
+    width: 50%;
+    margin: 0 auto;
+}
+.encabezado-tabla th{
+    cursor: pointer;
+}
+
 /*estilos tabla*/
 table#tabla-datos{
     background-color: black;
@@ -45,7 +58,7 @@ table tr.fila{
 }
 .boton{
     width: 7.5rem;
-    height: 3rem;
+    height: 3.5rem;
     border-radius: 4px;
     color: white;
     font-weight: bold;

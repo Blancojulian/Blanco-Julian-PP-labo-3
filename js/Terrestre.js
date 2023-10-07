@@ -5,8 +5,8 @@ class Terrestre extends Vehiculo {
     constructor({id, modelo, anoFab, velMax, cantPue, cantRue}) {
         super(id, modelo, anoFab, velMax);
 
-        this.cantPue = cantPue;
-        this.cantRue = cantRue;
+        this.cantPue = parseFloat(cantPue);
+        this.cantRue = parseFloat(cantRue);
 
         this.#controlarParametros();
     }

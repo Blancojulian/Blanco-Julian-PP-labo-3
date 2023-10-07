@@ -5,12 +5,12 @@ export const calcularPromedio = (lista = []) => {
     if (lista.length <= 0) {
         throw new Error('La lista debe contener personas');
     }
-    
-    const sumaEdad = lista.reduce((acumulador, vehiculo) => {
+    console.log(lista);
+    const suma = lista.reduce((acumulador, vehiculo) => {
         return acumulador + vehiculo.velMax;
     }, 0);
     
-    return (sumaEdad / lista.length).toFixed(2);
+    return (suma / lista.length).toFixed(2);
 }
 
 export const formDataToObject = (formData) => {

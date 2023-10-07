@@ -13,19 +13,20 @@
     <header></header>
     <main>
         <div class="datos">
+            <h2>Form Datos</h2>
             <form action="" id="form-datos">
                 <div>
-                    <label for="filtro">Tipo</label>
-                    <select name="filtro" class="filtro">
+                    <label class="form-label" for="filtro">Tipo</label>
+                    <select class="form-select filtro" name="filtro">
                         <option value="todos" selected>Todos</option>
                         <option value="terrestre">Terrestre</option>
                         <option value="aereo">Aereo</option>
                     </select>
                 </div>
                 <div>
-                    <label for="promedio">Calcular velocidad maxima Promedio</label>
-                    <input type="text" name="promedio" id="">
-                    <button id="btn-calcular">Calcular</button>
+                    <label class="form-label" for="promedio">Calcular velocidad maxima Promedio</label>
+                    <input class="form-control" type="text" name="promedio" id="">
+                    <button class="btn btn-secondary" id="btn-calcular">Calcular</button>
                 </div>
                 <div class="container-checkbox">
                     
@@ -57,22 +58,22 @@
                     <input class="form-control" type="text" name="id">
                 </div>
                 <div>
-                    <label class="form-label" for="modelo">Nombre</label>
+                    <label class="form-label" for="modelo">Modelo</label>
                     <input class="form-control" type="text" name="modelo">
                 </div>
                 <div>
-                    <label class="form-label" for="anoFab">Apellido</label>
+                    <label class="form-label" for="anoFab">Año de fabricación</label>
                     <input class="form-control" type="number" name="anoFab">
                 </div>
                 <div>
-                    <label class="form-label" for="velMax">Edad</label>
+                    <label class="form-label" for="velMax">Velocidad Maxima</label>
                     <input class="form-control" type="number" name="velMax">
                 </div>
                 <div id="opciones-tipo">
                     
                     <div>
                         <label class="form-label" for="tipo">Tipo</label>
-                        <select class="form-select" name="tipo" class="tipo">
+                        <select class="form-select tipo" name="tipo">
                             <option value="" selected>Seleccionar</option>
                             <option value="terrestre">Terrestre</option>
                             <option value="aereo">Aereo</option>

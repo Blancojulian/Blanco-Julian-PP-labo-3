@@ -204,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let persona = null;
             const formData = new FormData(this);
             const obj = formDataToObject(formData);
-            obj.id = lista.getLastId();
+            obj.id = esModificar ? obj.id : lista.getLastId();
             
             if (inputTipo.value === FILTROS.TERRESTRE) {
                 persona = new Terrestre(obj);
@@ -214,17 +214,22 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 throw new Error('Debe seleccionar un tipo de vehiculo');
             }
-            console.log(persona);
+            //console.log(persona);
 
-            lista.addItem(persona);
-            agregarRow(persona);
-            //cargarTabla();
+            if (esModificar) {
+                lista.updateItem(persona.id, persona);
+                cargarTabla(lista.filtarLista(inputFiltro.value));
+            } else {
+                lista.addItem(persona);
+                agregarRow(persona);
+
+            }
             
             this.reset();
             
         } catch (err) {
-            console.log('Error al agregar persona: \n' + err.message); 
-            alert('Error al agregar persona: \n' + err.message);       
+            console.log('Error al agregar vehiculo: \n' + err.message); 
+            alert('Error al agregar vehiculo: \n' + err.message);       
         }
     });
     //change no funciona bien, a veces haciendo click al label cambiaba eñ checkbox o deseleccionaba todos
