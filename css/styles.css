@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.display-none{
+    display: none;
+}
+
+/*estilos tabla*/
+table#tabla-datos{
+    background-color: black;
+    border-radius: 1px;
+}
+
+table tr.encabezado-tabla{
+    background-color: #537C95;
+    /*no cambia el border de la row, ver como hacer*/
+}
+
+table tr.encabezado-tabla th{
+    background-color: #537C95;
+    /*border: 5px solid red;*/
+    padding: 0.1rem 1rem ;
+}
+
+table tr.fila{
+    background-color: #D8D8D8;
+    border-radius: 5px;
+}
+
+/*estilos botones*/
+.container-botones{
+    width: 50%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 0.5rem;
+}
+.boton{
+    width: 7.5rem;
+    height: 3rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    word-wrap: break-word;
+    white-space: normal;
+    cursor: pointer;
+    /*border: none;
+    text-wrap: balance;
+    display: inline-block;*/
+}
+
+.boton#btn-agregar{
+    background-color: #92DE5E;
+}
+
+.boton.btn-rojo{
+    background-color: #DA4343;
+}
+
+.boton.btn-azul{
+    background-color: #52A9EA;
+}
+
+/*estilos checkboxs*/
+.container-checkbox{
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.container-checkbox input {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    color: red;
+    border: 0.15em solid black;
+    border-radius: 0.15em;
+    display: flex;
+
+    transform: translateY(-0.075em);
+  }
+
+  
+  .container-checkbox input::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(white);
+    background-color: CanvasText;
+  }
+  .container-checkbox input::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+  .container-checkbox input:checked::before {
+    transform: scale(1);
+  }
+
+  .container-checkbox input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid grey;
+    outline-offset: max(2px, 0.15em);
+  }

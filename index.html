@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica primer parcial</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="module" defer src="./js/main.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+<body>
+    <header></header>
+    <main>
+        <div class="datos">
+            <form action="" id="form-datos">
+                <div>
+                    <label for="filtro">Tipo</label>
+                    <select name="filtro" class="filtro">
+                        <option value="todos" selected>Todos</option>
+                        <option value="terrestre">Terrestre</option>
+                        <option value="aereo">Aereo</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="promedio">Calcular velocidad maxima Promedio</label>
+                    <input type="text" name="promedio" id="">
+                    <button id="btn-calcular">Calcular</button>
+                </div>
+                <div class="container-checkbox">
+                    
+                </div>
+            </form>
+            <div class="container-botones">
+                <button id="btn-agregar" class="boton">Agregar</button>
+                <button id="btn-seleccionar" class="boton btn-azul">Seleccionar todas</button>
+                <button id="btn-deseleccionar" class="boton btn-rojo">Deseleccionar todas</button>
+                
+            </div>
+
+            <table id="tabla-datos">
+                <thead>
+                    <tr class="encabezado-tabla">
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="abm display-none">
+            <form action="" id="form-abm">
+                <h2>Formulario ABM</h2>
+                
+                <div class="display-none">
+                    <label class="form-label" for="id">Id</label>
+                    <input class="form-control" type="text" name="id">
+                </div>
+                <div>
+                    <label class="form-label" for="modelo">Nombre</label>
+                    <input class="form-control" type="text" name="modelo">
+                </div>
+                <div>
+                    <label class="form-label" for="anoFab">Apellido</label>
+                    <input class="form-control" type="number" name="anoFab">
+                </div>
+                <div>
+                    <label class="form-label" for="velMax">Edad</label>
+                    <input class="form-control" type="number" name="velMax">
+                </div>
+                <div id="opciones-tipo">
+                    
+                    <div>
+                        <label class="form-label" for="tipo">Tipo</label>
+                        <select class="form-select" name="tipo" class="tipo">
+                            <option value="" selected>Seleccionar</option>
+                            <option value="terrestre">Terrestre</option>
+                            <option value="aereo">Aereo</option>
+                        </select>
+                    </div>
+    
+                    <div class="display-none opciones-terrestre">
+                        <div>
+                            <label class="form-label" for="cantPue">Cantidad puertes</label>
+                            <input class="form-control" type="number" name="cantPue">
+                        </div>
+                        <div>
+                            <label class="form-label" for="cantRue">Cantidad ruedas</label>
+                            <input class="form-control" type="number" name="cantRue">
+                        </div>
+                    </div>
+    
+                    <div class="display-none opciones-aereo">
+                        <div>
+                            <label class="form-label" for="altMax">Altura maxima</label>
+                            <input class="form-control" type="number" name="altMax">
+                        </div>
+                        <div>
+                            <label class="form-label" for="autonomia">Autonomia</label>
+                            <input class="form-control" type="number" name="autonomia">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input type="submit" class="boton btn-azul" value="Aceptar">
+                <input type="reset" class="boton btn-rojo" value="Cancelar">
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    
+</body>
+</html>

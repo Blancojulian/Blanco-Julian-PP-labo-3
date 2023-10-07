@@ -1,0 +1,29 @@
+import Vehiculo from "./Vehiculo.js";
+
+class Aereo extends Vehiculo {
+
+    constructor({id, modelo, anoFab, velMax, altMax, autonomia}) {
+        super(id, modelo, anoFab, velMax);
+
+        this.altMax = altMax;
+        this.autonomia = autonomia;
+
+        this.#controlarParametros();
+    }
+
+    #controlarParametros() {
+        
+        if (this.altMax <= 0) {
+            throw new Error('La altura maxima debe ser mayor a cero');
+        }
+        if (this.autonomia <= 0) {
+            throw new Error('La autonomia de ruedas debe ser mayor a cero');
+        }
+        if (!this.altMax || !this.autonomia) {
+            throw new Error('Debe ingresar la altura maxima y la autonomia');
+        }
+
+    }
+}
+
+export default Aereo;
